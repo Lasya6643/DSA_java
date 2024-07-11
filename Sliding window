@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class slidingwindow {
+	public static void main(String[] args){
+     int[] a={1,2,3,4,5,6};
+	for(int l=1;l<a.length;l++){
+		int i=0;
+		int j=l;
+		while(j<a.length) {
+			for (int k = i; k < j; k++) {
+				System.out.print(a[k] + " ");
+			}
+			System.out.println(" ");
+			i++;
+			j++;
+		}
+	}
+	}
+ }
