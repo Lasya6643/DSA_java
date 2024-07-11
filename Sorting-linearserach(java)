@@ -1,0 +1,36 @@
+// linearsearch using resurion and functions. 
+import java.util.Scanner;
+public class linerasearch {
+	public static int linearSearch(int[] a, int key) {
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == key) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	//linearsearch using recursion
+	public static int linearSearchrec(int[] a, int key,int idx){
+		//System.out.println("linearSearchRec(a,"+key+,"+idx")");
+		if(idx==a.length) {
+			return - 1;
+		}
+			if(a[idx]==key){
+				return idx;
+			}
+			else {
+				return linearSearchrec(a, key, idx + 1);
+			}
+		}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		for (int i = 0; i < n; i++) {
+			a[i] = sc.nextInt();
+		}
+		int key=sc.nextInt();
+		//int result=linearSearch(a,key);///or sout(linearSearch(a,key));
+		System.out.println(linearSearchrec(a,key,0));
+	}
+}
